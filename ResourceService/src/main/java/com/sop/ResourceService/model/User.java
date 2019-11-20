@@ -1,4 +1,4 @@
-package com.sop.AuthorizationService.model;
+package com.sop.ResourceService.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

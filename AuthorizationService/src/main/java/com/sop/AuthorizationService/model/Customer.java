@@ -1,10 +1,10 @@
-package com.sop.ResourceService.model;
+package com.sop.AuthorizationService.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Customer {
+public class Customer extends BaseEntity {
 
 	@Id
 	private int id;
@@ -17,7 +17,8 @@ public class Customer {
 	private String city;
 	private String state;
 	private String zipCode;
-	
+	private String password;
+
 	public Customer() {
 		super();
 	}
@@ -25,15 +26,15 @@ public class Customer {
 	public int getId() {
 		return id;
 	}
-	
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -101,5 +102,13 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 }
