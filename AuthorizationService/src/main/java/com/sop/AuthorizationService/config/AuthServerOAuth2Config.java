@@ -62,8 +62,8 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
 		clients.inMemory().withClient("client_id").secret(new BCryptPasswordEncoder().encode("client_password"))
 		.authorizedGrantTypes("password", "authorization_code", "refresh_token").scopes("read", "write")
 		.authorities("ROLE_CLIENT", "ROLE_TRUSTED_CLIENT", "USER", "ADMIN").autoApprove(true)
-		.accessTokenValiditySeconds(18000)// Access token is only valid for 3 minutes.
-		.refreshTokenValiditySeconds(60000);// Refresh token is only valid for 10 minutes.;
+		.accessTokenValiditySeconds(604800)// Access token is only valid for 3 minutes.
+		.refreshTokenValiditySeconds(1209600);// Refresh token is only valid for 10 minutes.;
 	}
 
 	@Override
